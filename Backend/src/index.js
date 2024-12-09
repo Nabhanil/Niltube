@@ -1,4 +1,13 @@
+import dotenv from "dotenv"
+import {dbConnection} from "./db/index.js"
+import express from "express"
+dotenv.config({
+    path: './env'
+})
 
-import db_func from "./db/index.js";
+const app = express()
 
-db_func()
+dbConnection()
+app.listen(process.env.PORT,()=>{
+    console.log(`App is listening on ${process.env.PORT}`)
+})

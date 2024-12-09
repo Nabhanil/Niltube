@@ -1,2 +1,2 @@
-const DB_Name = "videotube"
-export default DB_Name
+const DB_NAME = "videotube"
+export {DB_NAME}
